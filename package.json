@@ -1,0 +1,30 @@
+{
+  "name": "musicApp",
+  "version": "2.0.0",
+  "description": "A personal music application.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "dist": "build --x64"
+  },
+  "author": "Devin Miller",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-builder": "^19.5.1",
+    "electron-prebuilt": "^1.4.13",
+    "electron-reload": "^1.2.1"
+  },
+  "dependencies": {
+    "r-json": "^1.2.7",
+    "youtube-api": "^2.0.8",
+    "youtube-iframe": "^1.0.3",
+    "youtube-node": "^1.3.0"
+  },
+  "build": {
+    "appId": "musicApp",
+    "win": {
+      "icon": "./build/icon.ico"
+    }
+  }
+}

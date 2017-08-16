@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Music Player</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="player">
+    <div class="playerHeader">
+      <div class="controls">
+        <i class="fa fa-backward" id="prev"></i>
+        <i class="fa fa-play" id="toggleMusic" accesskey="c"></i>
+        <i class="fa fa-forward" id="next"></i>
+        <button id="loginLink">Login</button>
+        <div class="userInfo"></div>
+      </div>
+      <div class="audio">
+        <i class="fa fa-volume-up" id="volumeIcon"></i>
+        <input type="range" class="volumeBar" id="volume" min="0" max="50" value="40"/>
+      </div>
+      <div class="windowOptions">
+        <div class="minimize"><i class="fa fa-window-minimize" aria-hidden="true"></i></div>
+        <div class="close"><i class="fa fa-close" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    <div class="playerBody">
+      
+      <div class="info">
+        <p>Now Playing: <span class="nowPlaying"></span></p>
+        <div class="songProgress">
+          <div class="shadow"></div>
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="moreOptions">
+          <i class="fa fa-music" id="radio" title="enter radio"></i>
+          <i class="fa fa-plus" id="addSong" title="add song"></i>
+          <i class="fa fa-bars" id="openMenu" title="songs/playlists"></i>
+          <i class="fa fa-repeat" id="repeatSong" title="repeat song"></i>
+          <i class="fa fa-eye-slash" id="videoToggle" title="toggle video"></i>
+        </div>
+      </div>
+      <div class="image">
+        <div id="video"></div>
+      </div>
+      <div class="menu">
+        <i class="fa fa-close" id="closeMenu"></i>
+        <i class="fa fa-search" id="searchSongs"></i>
+        <input type="text" id="search" class="songSearch"/>
+        <ul class="songs"></ul>
+        <div class="playlists"></div>
+        <div class="addPlaylist">
+          <p>Add Playlist</p>
+          <form id="playlistForm">
+            <input type="text" placeholder="name" id="playlistName" required/>
+            <input type="text" placeholder="id" id="playlistId" required/>
+            <button>Add</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>require('./music.js');</script>
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+</body>
+</html>
